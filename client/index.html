@@ -4,6 +4,7 @@
 <title>When rates rise</title>
 <link rel="stylesheet" href="site/base.css">
 <link rel="stylesheet" href="components/header/index.css">
+<link rel="stylesheet" href="components/hero/index.css">
 <link rel="stylesheet" href="components/panels/index.css">
 <link rel="stylesheet" href="components/faq/index.css">
 <link rel="stylesheet" href="components/slidedeck/index.css">
@@ -11,11 +12,18 @@
 </head>
 <body>
 <header class="header">
-<h1 class="header__title">When rates rise</h1>
+<div class="hero">
+<img class="hero__image" src="components/hero/hero.jpg" alt="">
+<h1 class="hero__title">When rates rise</h1>
+</div>
 <nav class="panels-nav">
-  <a class="panels-nav__item" href="#primer">Interest rates explained</a>
-  <a class="panels-nav__item" href="#faq">FAQs</a>
-  <a class="panels-nav__item panels-nav__item--selected" href="#news">In the news</a>
+  <ul>
+    <li>
+      <a class="panels-nav__item" href="#primer">Interest rates explained</a>
+    </li>
+    <li><a class="panels-nav__item" href="#faq">How will this affect me?</a></li>
+    <li><a class="panels-nav__item panels-nav__item--selected" href="#news">News and analysis</a></li>
+  </ul>
 </nav>
 </header>
 <div id="primer">
