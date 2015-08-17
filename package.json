@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "watch": "srvlr client"
+  },
+  "devDependencies": {
+    "srvlr": "^0.4.0"
+  }
+}
