@@ -1,0 +1,26 @@
+.news-update__title {
+  font-weight: bold;
+}
+
+.news-card {
+  background-color: #fff;
+  margin: .5em;
+  padding: .5em;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px #666;
+}
+
+.news-card--update {
+  background-color: #FDC7CE;
+}
+
+.news-card__issue {
+  font-weight: bold;
+}
+
+.news-card__kicker {
+  opacity: .5;
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.6em;
+}

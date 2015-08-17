@@ -1,0 +1,18 @@
+.panels-nav {
+  white-space: nowrap;
+  background-color: #f1f1f1;
+  padding: .25em .5em 0 .5em;
+}
+
+.panels-nav__item {
+  color: #333333;
+  text-decoration: none;
+  padding: 0.2em 0;
+  border-bottom: 5px solid transparent;
+  box-sizing: border-box;
+  margin-right: 1.5em;
+}
+
+.panels-nav__item--selected {
+  border-color: #333333;
+}
