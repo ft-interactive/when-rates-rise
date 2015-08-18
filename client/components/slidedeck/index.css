@@ -1,0 +1,7 @@
+.slide {
+  height: 85vh;
+  margin: .5em;
+  padding: .5em;
+  background-color: #fff;
+  border-radius: 3px;
+}

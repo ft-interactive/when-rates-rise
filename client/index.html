@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>When rates rise</title>
 <link rel="stylesheet" href="site/base.css">
 <link rel="stylesheet" href="components/header/index.css">
@@ -11,22 +12,27 @@
 <link rel="stylesheet" href="components/news/index.css">
 </head>
 <body>
-<header class="header">
-<div class="hero">
+<!-- <header class="hero">
 <img class="hero__image" src="components/hero/hero.jpg" alt="">
 <h1 class="hero__title">When rates rise</h1>
-</div>
+</header> -->
+
+
+
 <nav class="panels-nav">
   <ul>
     <li>
-      <a class="panels-nav__item" href="#primer">Interest rates explained</a>
+      <a class="panels-nav__item panels-nav__item--selected" href="#primer">Interest rates explained</a>
     </li>
     <li><a class="panels-nav__item" href="#faq">How will this affect me?</a></li>
     <li><a class="panels-nav__item panels-nav__item--selected" href="#news">News and analysis</a></li>
   </ul>
 </nav>
-</header>
-<div id="primer">
+
+<div class="panels-container">
+  
+
+<div id="primer" class="panels-layer">
   <div class="slide-deck">
     <div class="slide"></div>
     <div class="slide"></div>
@@ -37,25 +43,64 @@
   </div>
 </div>
 
-<div id="faq">
-  <nav class="faq-nav"></nav>
+<div id="faq" class="panels-layer">
+  <nav class="faq-nav">
+    <div class="faq-nav__kicker">FAQ</div>
+    <h2 class="faq-nav__title">How will this affect me?</h2>
+    <div class="faq-nav__section">
+      <h3>Section</h3>
+      <ul>
+        <li><a href="#">A question you might want to read?</a></li>
+        <li><a href="#">A question you might want to read?</a></li>
+        <li><a href="#">A question you might want to read?</a></li>
+      </ul>
+    </div>
+    <div class="faq-nav__section">
+      <h3>Section</h3>
+      <ul>
+        <li><a href="#">A question you might want to read?</a></li>
+        <li><a href="#">A question you might want to read?</a></li>
+        <li><a href="#">A question you might want to read?</a></li>
+      </ul>
+    </div>
+    <div class="faq-nav__section">
+      <h3>Section</h3>
+      <ul>
+        <li><a href="#">A question you might want to read?</a></li>
+        <li><a href="#">A question you might want to read?</a></li>
+        <li><a href="#">A question you might want to read?</a></li>
+      </ul>
+    </div>
+    
+  </nav>
+  <div class="faq-card">
+    <div class="question__big">
+      This is big topic/question?
+    </div>
+    <hr class="faq-card__splitter">
+  </div>
 </div>
 
-<div id="news">
+<div id="news" class="panels-layer">
 
   <div class="news-card news-card--update">
-    <div class="news-update__title"><span class="news-card__kicker">Recently</span> Chinese Yuan falters</div>
+    <div class="news-update__title">
+      <span class="news-card__kicker">Recently</span> Chinese Yuan falters</div>
     <p>This is where we tell people the top line of the most relevant recent news event and what it means to "when rates rise".</p>
     <a href="#">Past updates</a>
   </div>
 
   <div class="news-card">
-    <div class="news-card__issue"><span class="news-card__kicker">US</span> Is the economy ready?</div>
+    <div class="news-card__issue">
+      <span class="news-card__kicker">US</span> Is the economy ready?
+    </div>
     <p>Probably, but the Fed needs to get the speed of increase right.</p>
   </div>
 
   <div class="news-card">
-    <div class="news-card__issue"><span class="news-card__kicker">Impact</span> Emerging markets</div>
+    <div class="news-card__issue">
+      <span class="news-card__kicker">Impact</span> Emerging markets
+    </div>
   </div>
 
   <div class="news-card">
@@ -71,6 +116,9 @@
   </div>
 
 </div>
+
+</div>
+
 <script src="components/panels/index.js"></script>
 <script src="components/slidedeck/index.js"></script>
 <script src="components/faq/index.js"></script>

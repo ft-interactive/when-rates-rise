@@ -1,8 +1,9 @@
 .hero {
-  height: 86vh;
+  height: 80vh;
   text-align: center;
   background-color: #fff;
   position: relative;
+  border-bottom: 1px solid #ddd;
 }
 
 .hero__image {
