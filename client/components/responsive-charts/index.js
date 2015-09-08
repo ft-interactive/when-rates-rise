@@ -1,4 +1,3 @@
-console.log("hello responsive lines! d3 v:" + d3.version)
 
 function debounce (fn, timeout) {
   var timeoutID = -1;
@@ -49,6 +48,33 @@ document.addEventListener('DOMContentLoaded', function () {
 				}, 125));
 
 				svg.call( chart );
+			});
+		});
+
+	d3.selectAll('.dot-plot')
+		.each(function(){
+			var parent = d3.select(this);
+			var bounds = parent.node().getBoundingClientRect();
+			var svg = parent.append('svg')
+				.attr({
+					height:bounds.height,
+					width:bounds.width
+				});
+
+			d3.json(this.dataset.source, function(data){
+				var chart = dotPlot()
+					.data(data);
+
+				resizeHandlers.push(debounce(function (){
+					var bounds = parent.node().getBoundingClientRect();
+					svg.attr({
+						width: bounds.width,
+						height: bounds.height
+					});
+					svg.call(chart);
+				}, 125));
+				
+				svg.call(chart);
 			});
 		});
 
