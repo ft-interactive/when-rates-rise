@@ -30,13 +30,12 @@
   font-weight: 600;
   font-size: 18px;
 }
-
+.reading-nav a.selected,
 .reading-nav a:hover {
   opacity: .9;
 }
 
 .reading-nav a.selected {
-  opacity: 1;
   background: linear-gradient(to bottom, transparent 50%, #333 100%);
 }
 

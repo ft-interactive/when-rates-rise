@@ -1,4 +1,5 @@
 (function(){
+'use strict';
 
 var items = document.querySelectorAll('.reading-nav a');
 var nav = items[0].parentNode;
@@ -10,7 +11,7 @@ for (var i = 0; i < items.length; i++) {
   var href = items[i].getAttribute('href') || '';
   var is_anchor = href.charAt(0) === '#';
   var target = !is_anchor ? null : document.getElementById(href.substr(1));
-  item_map[href] =  {
+  item_map[href] = {
     nav: items[i],
     index: i,
     href: href,
@@ -46,7 +47,6 @@ function set_nav_item(hash, animate, rerender) {
     marker.style.transition = 'width 0.1s ease-out, left 0.2s ease';
   }
 
-  var rect = selected_item.nav.getBoundingClientRect();
   marker.style.left = selected_item.nav.offsetLeft + 'px';
   marker.style.width = selected_item.nav.offsetWidth + 'px';
 
@@ -62,15 +62,36 @@ function set_nav_item(hash, animate, rerender) {
       marker.style.transition = 'width 0.1s ease-out, left 0.2s ease';
     }
 
-    selected_item.timeout = setTimeout(function(){
-      // console.log('blahs')
-      // scrollarea.scrollLeft = selected_item.nav.offsetLeft;
-    }, 1000);
+    selected_item.timeout = setTimeout(centre_nav_on_selected_item, 250);
+  }
+}
+
+function centre_nav_on_selected_item() {
+  // if nav bar contents are wider than can fit (i.e. mobile)...
+
+  if (nav.scrollWidth > nav.offsetWidth) {
+    // adjust the scroll to centre the selected item
+    // (or just as far as the scroll will go)
+
+    var r = selected_item.nav.getBoundingClientRect();
+    var viewportWidth = window.innerWidth;
+
+    // what would its scrollLeft be ideally?
+    var idealLeft = (viewportWidth / 2) - (r.width / 2);
+
+    // how much does it need to change?
+    var changeBy = idealLeft - r.left;
+
+    // so what is the new scrollLeft for the nav?
+    var targetScrollLeft = nav.scrollLeft - changeBy;
+    if (targetScrollLeft < 0) targetScrollLeft = 0;
+
+    // set it
+    nav.scrollLeft = targetScrollLeft; // TODO: animate it?
   }
 }
 
 var display_marker;
-var nav;
 var showing_nav = false;
 var hash_on_load = !!location.hash && item_map[location.hash];
 
@@ -102,49 +123,59 @@ function show_nav(){
 set_nav_item(location.hash, false);
 
 // when user clicks anchor links
-window.addEventListener('hashchange', function(event) {
+window.addEventListener('hashchange', function () {
   if (item_map.hasOwnProperty(location.hash)) {
     set_nav_item(location.hash, true);
   }
 }, false);
 
-window.addEventListener('scroll', function(){
-  // TODO: debounce/throttle a little
-  show_nav();
 
-  if (scroll_top() < window.innerHeight / 3) {
-    history.replaceState(null, '', location.pathname + location.search);
-    return;
-  }
+// whenever page scroll offset changes, ensure the current nav item is highlighted
+// and ensure the hash is correct
+var scrollFrame;
+window.addEventListener('scroll', function () {
+  cancelAnimationFrame(scrollFrame);
+  scrollFrame = requestAnimationFrame(function () {
+    show_nav();
 
-  var r;
-  var top_half = window.innerHeight / 3;
-  for (var h in item_map) {
-    if (item_map[h].target && h !== location.hash) {
-      // FIXME: probably inefficient and janky
-      r = item_map[h].target.getBoundingClientRect();
+    if (scroll_top() < window.innerHeight / 3) {
+      history.replaceState(null, '', location.pathname + location.search);
+      return;
+    }
 
-      if (r.height > 0 && r.bottom > top_half && r.top < top_half) {
-        // replaceState does not trigger a hashchange event
-        history.replaceState(null, '', h);
-        set_nav_item(h, true);
-        break;
+    var r;
+    var top_half = window.innerHeight / 3;
+    for (var h in item_map) {
+      if (item_map[h].target && h !== location.hash) {
+        // FIXME: probably inefficient and janky
+        r = item_map[h].target.getBoundingClientRect();
+
+        if (r.height > 0 && r.bottom > top_half && r.top < top_half) {
+          // replaceState does not trigger a hashchange event
+          history.replaceState(null, '', h);
+          set_nav_item(h, true);
+          break;
+        }
       }
     }
-  }
-
-  // TODO: set the hash to null if none of the elements are visible
+  });
 });
 
-window.addEventListener('resize', function(){
-  // TODO: debounce
+
+// redo stuff whenever the window changes size (throttled to framerate)
+var resizeFrame;
+window.addEventListener('resize', function () {
+  cancelAnimationFrame(resizeFrame);
+
+  resizeFrame = requestAnimationFrame(function () {
+    set_nav_item(location.hash, false, true);
+    centre_nav_on_selected_item();
+  });
+});
+
+// redo stuff after fonts load cos measurements change
+window.addEventListener('load', function(){
   set_nav_item(location.hash, false, true);
 });
-
-window.addEventListener('onload', function(){
-  set_nav_item(location.hash, false, true);
-});
-
-// TODO: redo stuff after fonts load cos measurements change
 
 }());
