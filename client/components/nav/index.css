@@ -5,6 +5,7 @@
   overflow-x: scroll;
   overflow-y: hidden;
   text-align: center;
+  -webkit-scroll-behavior: smooth;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   /*border-bottom: 1px solid #A39D94;*/
@@ -15,6 +16,7 @@
 .on {
   top: 0;
 }
+
 
 .reading-nav::-webkit-scrollbar { display: none; }
 

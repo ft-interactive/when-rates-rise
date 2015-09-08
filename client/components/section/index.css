@@ -1,5 +1,6 @@
 .section {
-  padding: .1em 1em;
+  margin: 5px 0;
+  padding: 0 1em;
 }
 
 .section__title,
@@ -8,6 +9,14 @@
   font-weight: 200;
   color: #1D1D1D;
   margin: 0 auto;
+}
+
+.section:before { 
+  display: block; 
+  content: " "; 
+    height: 55px;      /* Give height of your fixed element */
+        margin-top: -55px; /* Give negative margin of your fixed element */    
+        visibility: hidden; 
 }
 
 .section__title {
