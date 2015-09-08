@@ -47,7 +47,6 @@ function set_nav_item(hash, animate, rerender) {
     marker.style.transition = 'width 0.1s ease-out, left 0.2s ease';
   }
 
-  var rect = selected_item.nav.getBoundingClientRect();
   marker.style.left = selected_item.nav.offsetLeft + 'px';
   marker.style.width = selected_item.nav.offsetWidth + 'px';
 
