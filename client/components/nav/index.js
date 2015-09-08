@@ -169,6 +169,7 @@ window.addEventListener('resize', function () {
 
   resizeFrame = requestAnimationFrame(function () {
     set_nav_item(location.hash, false, true);
+    centre_nav_on_selected_item();
   });
 });
 
