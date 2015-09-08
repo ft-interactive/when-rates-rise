@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
 				var chart = responsiveLine()
 								.data(data, baseline)
 								.keyLables({
-									'Fed target':'Fed target rate (%)',
-									'base rate':'BoE base rate (%)',
+									'Fed target':'Fed target rate',
+									'base rate':'BoE base rate',
 									'US 10yr bond':'10yr US bond yield',
 									'10yr bond':'10yr UK bond yield'
 								});

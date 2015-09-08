@@ -4,6 +4,17 @@
 	font-weight: 600;
 	color: #333333;
 	line-height: 22px;
+	margin-bottom:0px;
+}
+
+p.chart-subtitle{
+	font-family: "MetricWeb", sans-serif;
+	font-size: 18px;
+	font-weight: 200;
+	color: #333333;
+	line-height: 22px;
+	margin-top:0px;
+	margin-bottom:0px;
 }
 
 .source{
