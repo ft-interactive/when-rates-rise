@@ -1,0 +1,44 @@
+.reading-nav {
+  background-color: #fff1e0;/*#FBE5DA;#FDF7F0*/
+  position: relative;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /*border-bottom: 1px solid #A39D94;*/
+  box-shadow: 0 1px 3px #A39D94;
+  display: none;
+}
+
+.reading-nav::-webkit-scrollbar { display: none; }
+
+.reading-nav a{
+  display: inline-block;
+  padding: .9em .6em;
+  text-align: center;
+  font-family: 'MetricWeb', sans-serif;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+#reading-marker {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  height: 4px;
+  background: #7B766D;
+  width: 30px;
+  left: 20px;
+}
+
+.reading-nav__sticky {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+}

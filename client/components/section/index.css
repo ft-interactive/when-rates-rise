@@ -1,0 +1,31 @@
+.section {
+  padding: .1em 1em;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+  font-weight: 200;
+}
+
+.section__title {
+  margin: 1em auto;
+  font-size: 1.6rem;
+}
+
+.section__subtitle {
+  margin: .5em auto;
+  font-size: 1.1rem;
+}
+
+@media (max-width:580px) {
+
+  .section__title,
+  .section__subtitle {
+    text-align: left;
+  }
+
+  .section__title {
+    font-size: 1.4rem;
+  }
+}

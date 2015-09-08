@@ -1,0 +1,114 @@
+.cover {
+  background: #fff1e0 url('bg-desktop.png') no-repeat;
+  background-position: center 141px;
+  background-size: 700px auto;
+  position: relative;
+  margin: 0 0 1em 0;
+  padding-top: 30px;
+}
+
+.cover h1 {
+ margin-top: -.2em;
+ text-align: center;
+ font-weight: 600;
+ /*font-family: 'FinancierDisplayWeb', serif;*/
+ font-size: 66px;
+ color: #43423E;
+}
+
+.cover nav {
+  margin: 0 auto;
+  max-width: 820px;
+  border-spacing: 1em;
+  margin-top: 625px;
+}
+
+.cover nav a {
+  display: table-cell;
+  padding: .7em .3em;
+  font-weight: 400;
+  background-color: #DCD7CE;
+  border-radius: 5px;
+  color: #444;
+  width: 20%;
+  max-width: 270px;
+  text-align: center;
+  /*text-transform: uppercase;*/
+  text-decoration: none;
+  box-shadow: 0 1px 2px #74736C;
+  font-family: FinancierDisplayWeb;
+  letter-spacing: 0.4px;
+  font-size: 1em;
+}
+
+.cover nav a:hover {
+  background-color: #C7C1B6;
+}
+
+.cover .logo {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 200px;
+  padding: .5em;
+}
+
+.cover .logo img {
+  width: 100%;
+  height: auto;
+}
+
+.cover .logo + hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+@media (max-width:768px) {
+  .cover nav {
+    font-size: 20px;
+    margin-top: 640px;
+  }
+
+  .cover nav a {
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    margin: .7em auto;
+  }
+
+}
+
+@media (max-width:600px) {
+  .cover {
+    background-image: url('bg.png');
+    background-position: center 13vh;
+    background-size: 100% auto;
+    padding-top: .5em;
+    height: 100vh;
+  }
+
+  .cover h1 {
+   margin-top: -.2em;
+   font-size: 2.3em;
+  }
+
+  .cover nav {
+    position: absolute;
+    bottom: .5em;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .cover nav a {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  
+.cover nav a:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+}
+
+

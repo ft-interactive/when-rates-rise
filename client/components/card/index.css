@@ -1,0 +1,211 @@
+.card {
+  display: block;
+  padding: .8rem;
+  margin: 1em auto;
+  max-width: 720px;
+  background-color: #fff; /* economic dashbaord card bg #FFF9F1; */
+  /*border: 1px solid #cec6b9;*/
+  /*border-radius: 4px;*/
+  box-shadow: 0 1px 2px #807E77;
+  position: relative;
+}
+
+a.card {
+  text-decoration: inherit;
+  color: inherit;
+  padding-right: 20px;
+  padding-bottom: 28px;
+}
+
+a.card:after {
+  content: " ";
+  background: url('https://image.webservices.ft.com/v1/images/raw/fticon:arrow-right?height=20&tint=333333,333333&source=ig_wrr') no-repeat center center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0 7px 13px 0;
+}
+
+a.card .card__header:hover .card__title,
+a.card .card__header:hover .card__kicker {
+  text-decoration: underline;
+}
+
+.card__kicker {
+  font-family: 'MetricWeb', sans-serif;
+  text-transform: uppercase;
+  color: #9e2f50;
+  font-size: .7rem;
+  display: block;
+  letter-spacing: .035em;
+}
+
+.card__title {
+  margin: 0 auto;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+.card__img + .card__title {
+  max-width: 550px;
+  margin-left: 65px;
+}
+
+.card__img {
+  background-color: #ccc;
+  width: 56px;
+  height: 56px;
+  float: left;
+  border: none;
+  margin: 0 .5em 1em 0;
+}
+
+.card__body {
+  clear: both;
+  color: #888;
+  font-family: 'FinancierTextWeb', serif;
+  line-height: 1.25;
+}
+
+a.card .card__body :last-child {
+  margin-bottom: 0;
+}
+
+.card__body p{
+  margin: 1em 0;
+  max-width: 635px;
+}
+
+.card--video {
+  padding: 0;
+  border: none;
+  background-color: #3E3C39;
+  height: 79.999%;
+  border-radius: 0;
+}
+
+.card--video video {
+  width: 100%;
+}
+
+.card--solid {
+  background-color: #E9DECF;
+}
+
+.card--analysis {
+
+}
+
+.card__splitter {
+  margin: 1rem -.8rem;
+  border: none;
+  height: 2px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(255,255,255,.6) 100%);
+}
+
+.card--news {
+  /*background-color: #FFEDDA;*/
+}
+/*
+
+.card__group {
+  position: relative;
+}
+
+.card__group:before {
+  font-size: 160px;
+  line-height: 40px;
+  font-family: 'FinancierDisplayWeb', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  content: "“";
+  position: absolute;
+  top: -36px;
+  right: 15%;
+  line-height: 1;
+  color: #D4D1CC;
+}*/
+
+.card__group .card {
+  margin-top: 2px;
+  margin-bottom: 0;
+  box-shadow: 0 1px 1px #BBBAB3;
+  /*padding: .5em;*/
+}
+
+.card__group .card:first-child {
+  border-radius: 9px 9px 0 0;
+}
+
+.card__group .card:last-child {
+  border-radius: 0 0 9px 9px;
+}
+
+.card--comment .card__title {
+  max-width: none;
+}
+
+.card--comment .card__img {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-color: #F55056;
+}
+
+.card--comment .card__img + .card__title {
+  margin-left: 45px;
+}
+
+.card--comment .card__kicker {
+  color: #43423E;
+  font-size: .9em;
+  line-height: 40px;
+}
+
+.card--comment .pullquote {
+  position: relative;
+  padding: 0 12px 0 19px;
+  color: #6D6C65;
+  margin: -4px 0 0 0;
+}
+
+a.card .card__header:hover .pullquote{
+  color: #67665E;
+}
+
+.card--comment .pullquote p {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.25;
+  font-family: 'FinancierTextWeb', Georgia, serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+.card--comment .pullquote:before {
+  font-size: 22px;
+  font-family: 'FinancierDisplayWeb',Georgia,serif;
+  font-style: italic;
+  font-weight: 500;
+  content: "“";
+  position: absolute;
+  top: 1px;
+  left: 10px;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding-left: .6rem;
+    padding-right: .6rem;
+  }
+
+  .card__group .card {
+    padding-top: .6rem;
+  }
+}
+
