@@ -83,7 +83,7 @@ function show_nav(){
   if (!display_marker) return;
 
   var point = display_marker.getBoundingClientRect().top;
-  var out_of_view = point > window.innerHeight;
+  var out_of_view = point > window.innerHeight / 3;
 
   if (out_of_view && showing_nav) {
     showing_nav = false;
