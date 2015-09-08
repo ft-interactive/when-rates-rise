@@ -101,7 +101,7 @@ function show_nav(){
 set_nav_item(location.hash, false);
 
 // when user clicks anchor links
-window.addEventListener('hashchange', function (event) {
+window.addEventListener('hashchange', function () {
   if (item_map.hasOwnProperty(location.hash)) {
     set_nav_item(location.hash, true);
   }
@@ -136,8 +136,6 @@ window.addEventListener('scroll', function () {
         }
       }
     }
-
-    // TODO: set the hash to null if none of the elements are visible
   });
 });
 
