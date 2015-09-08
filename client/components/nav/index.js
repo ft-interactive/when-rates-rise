@@ -141,10 +141,9 @@ window.addEventListener('resize', function(){
   set_nav_item(location.hash, false, true);
 });
 
-window.addEventListener('onload', function(){
+// redo stuff after fonts load cos measurements change
+window.addEventListener('load', function(){
   set_nav_item(location.hash, false, true);
 });
-
-// TODO: redo stuff after fonts load cos measurements change
 
 }());
