@@ -16,6 +16,13 @@ body {
   scroll-behavior: smooth;
 }
 
+.o-footer__copyright {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .img--full {
   width: 90%;
   max-width: 460px;
