@@ -1,5 +1,21 @@
+.chart-title{
+	font-family: "MetricWeb", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	color: #333333;
+	line-height: 22px;
+}
+
+.source{
+	font-family: "MetricWeb", sans-serif;
+	font-size: 12px;
+	font-variant: italic;
+	color: #333333;
+}
+
 .responsive-date-line, .dot-plot {
 	height: 300px;
+	font-family: "MetricWeb", sans-serif;
 }
 
 .domain {
@@ -17,10 +33,20 @@
 	shape-rendering: cripsEdges;
 }
 
+.ordinal-label {
+	fill:#787878;
+}
+
 .y.axis line{
-	stroke: #000000;
+	stroke: #ddd;
 	stroke-width: 1px;
-	stroke-opacity: 0;
+	shape-rendering: cripsEdges;
+}
+
+.dot-plot .y.axis line{
+	stroke: #ddd;
+	stroke-opacity:0;
+	stroke-width: 1px;
 	shape-rendering: cripsEdges;
 }
 
@@ -61,8 +87,18 @@
 		shape-rendering: cripsEdges;
 	}
 
+.y.axis line {
+		stroke-dasharray: 2, 2;
+	}
+
+.responsive-date-line .x.axis .domain {
+		stroke: #999;
+		stroke-width: 1px;
+		shape-rendering: cripsEdges;
+	}
+
 .responsive-date-line .tick text {
-		font-size: 12px;
+		font-size: 16px;
 	}
 
 .responsive-date-line .y.axis .tick line {
@@ -70,7 +106,7 @@
 	}
 
 .dot-plot svg {
-	font-size: 12px;
+	font-size: 16px;
 }
 
 .vote-group {

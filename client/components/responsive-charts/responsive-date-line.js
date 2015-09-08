@@ -69,6 +69,7 @@ function responsiveLine(){
 		//axes
 		var xAxis = d3.svg.axis()
 			.scale( xScale )
+			.outerTickSize(0)
 			.ticks(9)
 			.tickFormat(function(d,i){
 				var year = d.getFullYear();
