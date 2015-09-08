@@ -137,7 +137,8 @@ p.chart-subtitle{
 }
 
 .median-label {
-	fill-opacity: 0.5;
+	fill-opacity: 0.7;
+  font-weight: 600;
 }
 
 
