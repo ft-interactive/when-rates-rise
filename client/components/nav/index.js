@@ -62,10 +62,32 @@ function set_nav_item(hash, animate, rerender) {
       marker.style.transition = 'width 0.1s ease-out, left 0.2s ease';
     }
 
-    selected_item.timeout = setTimeout(function(){
-      // console.log('blahs')
-      // scrollarea.scrollLeft = selected_item.nav.offsetLeft;
-    }, 1000);
+    selected_item.timeout = setTimeout(centre_nav_on_selected_item, 250);
+  }
+}
+
+function centre_nav_on_selected_item() {
+  // if nav bar contents are wider than can fit (i.e. mobile)...
+
+  if (nav.scrollWidth > nav.offsetWidth) {
+    // adjust the scroll to centre the selected item
+    // (or just as far as the scroll will go)
+
+    var r = selected_item.nav.getBoundingClientRect();
+    var viewportWidth = window.innerWidth;
+
+    // what would its scrollLeft be ideally?
+    var idealLeft = (viewportWidth / 2) - (r.width / 2);
+
+    // how much does it need to change?
+    var changeBy = idealLeft - r.left;
+
+    // so what is the new scrollLeft for the nav?
+    var targetScrollLeft = nav.scrollLeft - changeBy;
+    if (targetScrollLeft < 0) targetScrollLeft = 0;
+
+    // set it
+    nav.scrollLeft = targetScrollLeft; // TODO: animate it?
   }
 }
 
