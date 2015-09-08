@@ -92,7 +92,7 @@ a.card .card__body :last-child {
 }
 
 .card--solid {
-  background-color: #E9DECF;
+  background-color: #F6E9D8;/*#E9DECF;*/
 }
 
 .card--analysis {
