@@ -222,3 +222,10 @@ a.card .card__header:hover .pullquote{
   margin-top: .5em;
 }
 
+@media (max-width: 600px) {
+  .card__body .pullquote {
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+}
+
