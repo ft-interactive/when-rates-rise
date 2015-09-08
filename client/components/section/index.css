@@ -10,13 +10,13 @@
 }
 
 .section__title {
-  margin: 1em auto;
-  font-size: 1.6rem;
+  margin: 22px auto;
+  font-size: 2.5rem;
 }
 
 .section__subtitle {
-  margin: 1em auto .5em auto;
-  font-size: 1.2rem;
+  margin: 18px auto 9px auto;
+  font-size: 1.6rem;
 }
 
 @media (max-width:580px) {
@@ -27,6 +27,12 @@
   }
 
   .section__title {
+    margin: 18px auto;
+    font-size: 1.8rem;
+  }
+
+  .section__subtitle {
+     margin: 14px auto 5px auto;
     font-size: 1.4rem;
   }
 }
