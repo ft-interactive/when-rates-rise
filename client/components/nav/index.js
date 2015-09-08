@@ -1,6 +1,7 @@
 (function(){
 
 var items = document.querySelectorAll('.reading-nav a');
+var nav = items[0].parentNode;
 var item_map = {};
 var selected_item;
 var marker = document.getElementById('reading-marker');
@@ -14,6 +15,12 @@ for (var i = 0; i < items.length; i++) {
     href: href,
     target: !is_anchor ? null : document.getElementById(href.substr(1))
   };
+}
+
+function scroll_top() {
+  return window.pageYOffset ||
+          (document.documentElement && document.documentElement.scrollTop) ||
+            document.body.scrollTop;
 }
 
 function set_nav_item(hash, animate) {
@@ -61,7 +68,37 @@ window.addEventListener('hashchange', function(event) {
 
 set_nav_item(location.hash, true);
 
+var display_marker;
+var nav;
+var showing_nav = false;
+
+function show_nav(){
+
+  if (!display_marker) {
+    display_marker = document.getElementById('js-nav-display-marker');
+  }
+
+  if (!display_marker) return;
+
+  var point = display_marker.getBoundingClientRect().top;
+  var out_of_view = point > window.innerHeight;
+
+  if (out_of_view && showing_nav) {
+    showing_nav = false;
+    nav.classList.remove('on');
+  } else if (!out_of_view && !showing_nav) {
+    showing_nav = true;
+    nav.classList.add('on');
+  }
+  console.log(out_of_view, point, window.innerHeight);
+  console.log(scroll_top());
+
+}
+
 window.addEventListener('scroll', function(){
-  console(window.scrollTop);
+  show_nav();
 });
+
+show_nav();
+
 }());
