@@ -9,11 +9,11 @@
   -webkit-overflow-scrolling: touch;
   /*border-bottom: 1px solid #A39D94;*/
   /*box-shadow: 0 1px 3px #A39D94;*/
-  display: none;
+  top:-100px;
 }
 
 .on {
-  display: block;
+  top: 0;
 }
 
 @media (min-width:660px) {
@@ -34,9 +34,14 @@
   font-family: 'MetricWeb', sans-serif;
   letter-spacing: .01em;
   color: #fff;
+  opacity: 0.8;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
+}
+
+.reading-nav a.selected {
+  opacity: 1;
 }
 
 #reading-marker {
