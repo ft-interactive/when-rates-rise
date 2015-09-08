@@ -61,5 +61,7 @@ window.addEventListener('hashchange', function(event) {
 
 set_nav_item(location.hash, true);
 
-
+window.addEventListener('scroll', function(){
+  console(window.scrollTop);
+});
 }());
