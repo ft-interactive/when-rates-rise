@@ -1,5 +1,3 @@
-console.log('responsiveLine')
-
 function responsiveLine(){
 	var xScale = d3.time.scale(),
 		yScale = d3.scale.linear(),
