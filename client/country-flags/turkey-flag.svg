@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>turkey-flag</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0.06,21.5608189 C0.856274831,31.8772987 9.47924914,40 20,40 C31.046,40 40,31.046 40,20 C40,9.38237866 31.7270295,0.69764256 21.2752967,0.04 L18.7247033,0.04 C8.79001325,0.665109266 0.823852511,8.54276258 0.06,18.4391811 L0.06,21.5608189 L0.06,21.5608189 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mobile--rates-explained-Copy" sketch:type="MSArtboardGroup" transform="translate(-21.000000, -2094.000000)">
+            <g id="turkey-flag" sketch:type="MSLayerGroup" transform="translate(21.000000, 2094.000000)">
+                <g>
+                    <mask id="mask-2" sketch:name="Clip 2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M0.06,0.04 L40.02,0.04 L40.02,40 L0.06,40 L0.06,0.04 Z" id="Fill-1" fill="#E94B37" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    <path d="M28.446,14.768 L30.742,17.902 L34.435,16.686 L32.161,19.838 L34.456,22.972 L30.755,21.786 L28.48,24.938 L28.467,21.053 L24.766,19.867 L28.46,18.652 L28.446,14.768" id="Fill-3" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    <path d="M18.683,28.352 C14.084,28.352 10.355,24.537 10.355,19.831 C10.355,15.125 14.084,11.31 18.683,11.31 C21.532,11.31 24.045,12.774 25.546,15.006 C23.793,11.579 20.26,9.235 16.184,9.235 C10.363,9.235 5.645,14.012 5.645,19.903 C5.645,25.795 10.363,30.572 16.184,30.572 C20.488,30.572 24.187,27.959 25.824,24.216 C24.367,26.693 21.715,28.352 18.683,28.352" id="Fill-4" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

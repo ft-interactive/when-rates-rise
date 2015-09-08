@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>china-flag</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M1,21.5423613 C1.79747104,31.8691678 10.4333992,40 20.9699549,40 C32.0325488,40 41,31.037037 41,19.97998 C41,9.35173039 32.7146014,0.658300861 22.2471674,0 L19.6927424,0 C9.74312794,0.625735001 1.76500001,8.51127386 1,18.4175986 L1,21.5423613 L1,21.5423613 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mobile--rates-explained-Copy" sketch:type="MSArtboardGroup" transform="translate(-23.000000, -1685.000000)">
+            <g id="china-flag" sketch:type="MSLayerGroup" transform="translate(22.000000, 1685.000000)">
+                <g id="Imported-Layers">
+                    <mask id="mask-2" sketch:name="Clip 2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M1,0 L41,0 L41,40 L1,40 L1,0 Z" id="Fill-1" fill="#E94B37" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    <path d="M14.0005033,21.465044 L18.942938,25 L17.0605851,19.2724387 L22,15.7265692 L15.8899025,15.7265692 L14.0005033,10 L12.1070777,15.7265692 L6,15.7265692 L10.9384083,19.2724387 L9.05504876,25 L14.0005033,21.465044" id="Fill-3" fill="#F5DF64" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    <path d="M27.7096281,10.7112176 L30,10.1551297 L27.8166072,9.28779118 L27.9816607,7 L26.4605196,8.75648439 L24.2740703,7.8941021 L25.5201223,9.84586156 L24,11.5993722 L26.2913907,11.0512143 L27.5425369,13 L27.7096281,10.7112176" id="Fill-4" fill="#F5DF64" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    <path d="M27.7096281,30.7088566 L30,30.1576338 L27.8166072,29.2911434 L27.9816607,27 L26.4605196,28.7547918 L24.2740703,27.8912756 L25.5201223,29.844349 L24,31.5991408 L26.2913907,31.0528751 L27.5425369,33 L27.7096281,30.7088566" id="Fill-5" fill="#F5DF64" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    <path d="M33.7109885,16.9523651 L36,17.3411059 L34.3783241,15.6852099 L35.4591069,13.6315789 L33.3738083,14.6568954 L31.7491219,13 L32.0832915,15.2924717 L30,16.3177881 L32.2910186,16.709527 L32.6251882,19 L33.7109885,16.9523651" id="Fill-6" fill="#F5DF64" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    <path d="M33.0727363,25.5388441 L34.9737754,26.8693192 L34.1959426,24.6302521 L36,23.1618933 L33.7100445,23.243183 L32.9292429,21 L32.2889659,23.2915452 L30,23.3707769 L31.8990599,24.7115418 L31.2647204,27 L33.0727363,25.5388441" id="Fill-7" fill="#F5DF64" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
