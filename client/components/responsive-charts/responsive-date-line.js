@@ -16,7 +16,6 @@ function responsiveLine(){
 	}
 
 	function keyElement(d,i){
-		console.log(d,i);
 		var container = d3.select(this);
 
 		container.append('line')
@@ -36,8 +35,6 @@ function responsiveLine(){
 			.text(function(d){
 				return keyLabels[d];
 			});
-
-		console.log( container.node().getBoundingClientRect().width );
 	}
 
 	function chart(g){
@@ -49,26 +46,26 @@ function responsiveLine(){
 		xScale.domain(dateDomain).range([0, plotWidth]).nice();
 		yScale.domain(valueDomain).range([plotHeight, 0]).nice();
 
-		//key 
-		var keyContainer = g.selectAll('g.key-element')
-			.data( Object.keys(lineData) )
-			.enter()
-				.append('g')
-					.attr('class','key-element')
-					.each(keyElement);
-
-		//space out the key
-		var maxKeyWidth = 0;
-		keyContainer
-			.each(function(){
-				maxKeyWidth = Math.max( maxKeyWidth, d3.select(this).node().getBoundingClientRect().width );
+		//key (ONLY for more than one line)
+		if(Object.keys(lineData).length>1){
+				var keyContainer = g.selectAll('g.key-element')
+					.data( Object.keys(lineData) )
+						.enter()
+					.append('g')
+						.attr('class','key-element')
+						.each(keyElement);
+		
+			//space out the key
+			var maxKeyWidth = 0;
+			keyContainer
+				.each(function(){
+					maxKeyWidth = Math.max( maxKeyWidth, d3.select(this).node().getBoundingClientRect().width );
+				});
+				
+			keyContainer.attr('transform',function(d,i){ 
+				return 'translate(' + (i * (maxKeyWidth+20)) + ',' + margins.top/2 + ')';
 			});
-
-		console.log('MAX' , maxKeyWidth);
-		keyContainer.attr('transform',function(d,i){ 
-			return 'translate(' + (i * (maxKeyWidth+20)) + ',' + margins.top/2 + ')';
-		});
-
+		}
 		//axes
 		var xAxis = d3.svg.axis()
 			.scale( xScale )
@@ -134,15 +131,18 @@ function responsiveLine(){
 		return chart;
 	};
 
-	chart.data = function(d){
+
+	chart.data = function(d, base){
 		var dateFormat = d3.time.format('%Y-%m-%d');
 		data = d.map(function(record){
 			record.date = dateFormat.parse(record.date);
 			return record;
 		});
 		var lineKeys = Object.keys(data[0])
-						.filter( function(d){ return d!='date'; } );
-
+						.filter( function(d){
+							return d!='date' && d!='unit' && d!='ftname'; 
+						});
+		
 		valueDomain = [];
 
 		for(var i = 0; i < lineKeys.length; i++){
@@ -165,7 +165,9 @@ function responsiveLine(){
 		}
 
 		valueDomain = d3.extent(valueDomain);
-
+		if(base){
+			valueDomain[0] = base;
+		}
 		dateDomain = d3.extent(data, function(d){	
 			return d.date;
 		});
