@@ -110,6 +110,8 @@ p.chart-subtitle{
 
 .responsive-date-line .tick text {
 		font-size: 16px;
+		-webkit-font-feature-settings: 'tnum' 1;
+		font-feature-settings: 'tnum' 1;
 	}
 
 .responsive-date-line .y.axis .tick line {
