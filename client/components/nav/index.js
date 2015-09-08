@@ -1,4 +1,5 @@
 (function(){
+'use strict';
 
 var items = document.querySelectorAll('.reading-nav a');
 var nav = items[0].parentNode;
@@ -10,7 +11,7 @@ for (var i = 0; i < items.length; i++) {
   var href = items[i].getAttribute('href') || '';
   var is_anchor = href.charAt(0) === '#';
   var target = !is_anchor ? null : document.getElementById(href.substr(1));
-  item_map[href] =  {
+  item_map[href] = {
     nav: items[i],
     index: i,
     href: href,
@@ -70,7 +71,6 @@ function set_nav_item(hash, animate, rerender) {
 }
 
 var display_marker;
-var nav;
 var showing_nav = false;
 var hash_on_load = !!location.hash && item_map[location.hash];
 
@@ -102,43 +102,55 @@ function show_nav(){
 set_nav_item(location.hash, false);
 
 // when user clicks anchor links
-window.addEventListener('hashchange', function(event) {
+window.addEventListener('hashchange', function (event) {
   if (item_map.hasOwnProperty(location.hash)) {
     set_nav_item(location.hash, true);
   }
 }, false);
 
-window.addEventListener('scroll', function(){
-  // TODO: debounce/throttle a little
-  show_nav();
 
-  if (scroll_top() < window.innerHeight / 3) {
-    history.replaceState(null, '', location.pathname + location.search);
-    return;
-  }
+// whenever page scroll offset changes, ensure the current nav item is highlighted
+// and ensure the hash is correct
+var scrollFrame;
+window.addEventListener('scroll', function () {
+  cancelAnimationFrame(scrollFrame);
+  scrollFrame = requestAnimationFrame(function () {
+    show_nav();
 
-  var r;
-  var top_half = window.innerHeight / 3;
-  for (var h in item_map) {
-    if (item_map[h].target && h !== location.hash) {
-      // FIXME: probably inefficient and janky
-      r = item_map[h].target.getBoundingClientRect();
+    if (scroll_top() < window.innerHeight / 3) {
+      history.replaceState(null, '', location.pathname + location.search);
+      return;
+    }
 
-      if (r.height > 0 && r.bottom > top_half && r.top < top_half) {
-        // replaceState does not trigger a hashchange event
-        history.replaceState(null, '', h);
-        set_nav_item(h, true);
-        break;
+    var r;
+    var top_half = window.innerHeight / 3;
+    for (var h in item_map) {
+      if (item_map[h].target && h !== location.hash) {
+        // FIXME: probably inefficient and janky
+        r = item_map[h].target.getBoundingClientRect();
+
+        if (r.height > 0 && r.bottom > top_half && r.top < top_half) {
+          // replaceState does not trigger a hashchange event
+          history.replaceState(null, '', h);
+          set_nav_item(h, true);
+          break;
+        }
       }
     }
-  }
 
-  // TODO: set the hash to null if none of the elements are visible
+    // TODO: set the hash to null if none of the elements are visible
+  });
 });
 
-window.addEventListener('resize', function(){
-  // TODO: debounce
-  set_nav_item(location.hash, false, true);
+
+// redo stuff whenever the window changes size (throttled to framerate)
+var resizeFrame;
+window.addEventListener('resize', function () {
+  cancelAnimationFrame(resizeFrame);
+
+  resizeFrame = requestAnimationFrame(function () {
+    set_nav_item(location.hash, false, true);
+  });
 });
 
 // redo stuff after fonts load cos measurements change
