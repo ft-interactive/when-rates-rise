@@ -111,23 +111,21 @@ window.addEventListener('hashchange', function(event) {
 window.addEventListener('scroll', function(){
   // TODO: debounce/throttle a little
   show_nav();
+
+  if (scroll_top() < window.innerHeight / 3) {
+    history.replaceState(null, '', location.pathname + location.search);
+    return;
+  }
+
   var r;
   var top_half = window.innerHeight / 3;
-
   for (var h in item_map) {
     if (item_map[h].target && h !== location.hash) {
       // FIXME: probably inefficient and janky
       r = item_map[h].target.getBoundingClientRect();
 
-      // if (item_map[h].index === 1) {
-      //   // console.log('Replace state')
-      //   console.log('YES', r.top, top_half,r.top > top_half )
-      //   // history.replaceState(null, '', '#');
-      //   break;
-      // }
-
       if (r.height > 0 && r.bottom > top_half && r.top < top_half) {
-        // pushState does not trigger a hashchange event
+        // replaceState does not trigger a hashchange event
         history.replaceState(null, '', h);
         set_nav_item(h, true);
         break;
