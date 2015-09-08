@@ -13,6 +13,9 @@
 <link rel="stylesheet" href="components/tone/index.css">
 <link rel="stylesheet" href="components/faq/index.css">
 <link rel="stylesheet" href="components/nav/index.css">
+<link rel="stylesheet" href="components/responsive-charts/index.css">
+<script type="text/javascript" src="components/d3/d3.v3.min.js"></script>
+<script type="text/javascript" src="components/responsive-charts/responsive-date-line.js"></script>
 </head>
 <body>
 <script>
@@ -107,7 +110,13 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
     <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
       <div itemprop="text">
         <p>There is no automatic or formal link between US and UK interest rates but the widespread expectation is that the Bank of England will be the next central bank after the US to raise rates. The UK’s economic recovery is well on track, with solid growth and a strong labour market.</p>
+        <div class="responsive-date-line"
+            data-source="http://interactivegraphics.ft-static.com/data/bloomberg-economics/fed-target-and-base-rate.csv">
+        </div>
         <p>Historically, US and UK market interest rates, as measured by government bond yields, have also moved in tandem. These are the rates, set by the financial markets that feed down into the real costs of borrowing for households and companies.</p>
+        <div class="responsive-date-line"
+            data-source="http://interactivegraphics.ft-static.com/data/bloomberg-economics/us-10yr-bond-and-10yr-bond.csv">
+        </div>
       </div>
     </div>
   </section>
@@ -254,5 +263,6 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
         </div>
     </div>
 </footer>
+<script type="text/javascript" src="components/responsive-charts/index.js"></script>
 </body>
 </html>
