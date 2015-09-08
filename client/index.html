@@ -41,15 +41,10 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
 </noscript>
 
 <div class="reading-nav__sticky">
-  <nav class="reading-nav">
-    <a href="http://www.ft.com" class="reading-nav__ft"><img src="https://image.webservices.ft.com/v1/images/raw/fticon:brand-ft?width=40&amp;tint=ffffff,ffffff&amp;source=when-rates-rise"></a>
-    <a href="#what-is-happening">What's happening?</a>
-    <a href="#faq">How will this affect me?</a></a>
-    <a href="#in-depth-analysis">In-depth analysis</a>
+  <nav class="reading-nav"><a href="http://www.ft.com" class="reading-nav__ft"><img src="https://image.webservices.ft.com/v1/images/raw/fticon:brand-ft-logo-square?height=30&tint=ffffff,ffffff&source=ig_wrr" alt="Financial Times"></a><a href="#what-is-happening">What's happening?</a><a href="#faq">How will this affect me?</a></a><a href="#in-depth-analysis">In-depth analysis</a>
     <div id="reading-marker"></div>
   </nav>
 </div>
-
 
 <header class="cover">
   <a href="http://www.ft.com" class="logo"><img src="site/brand-ft-masthead.png" alt="Financial Times" /></a>
@@ -70,9 +65,9 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
     </div>
   </section>
   <section class="card card--video">
+  <div id="js-nav-display-marker"></div>
     <video src="" controls></video>
   </section>
-  <div id="js-nav-display-marker"></div>
 </section>
 
 <section id="faq" class="section">
@@ -112,10 +107,58 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
   </div>
 
   <section class="card" itemscope itemtype="http://schema.org/Question">
+    <h3 class="card__title" itemprop="name">I have a mortgage</h3>
+    <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+      <div itemprop="text">
+        <h4 class="chart-title">30-year fixed rate mortgage average in the US</h4>
+        <p class="chart-subtitle">%</p>
+        <div class="responsive-date-line"
+            data-source="http://interactivegraphics.ft-static.com/data/bloomberg-economics/30y-fed.csv">
+        </div>
+        <div class="source">Source: Bloomberg</div>
+      </div>
+    </div>
+  </section> 
+
+  <section class="card" itemscope itemtype="http://schema.org/Question">
+    <h3 class="card__title" itemprop="name">I’m invested in bonds</h3>
+    <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+      <div itemprop="text">
+        <h4 class="chart-title">10-year US government bond yield</h4>
+        <p class="chart-subtitle">%</p>
+        <div class="responsive-date-line"
+            data-source="http://interactivegraphics.ft-static.com/data/bloomberg-economics/us-10yr-bond.csv">
+        </div>
+        <div class="source">Source: Bloomberg</div>
+      </div>
+    </div>
+  </section> 
+
+  <section class="card" itemscope itemtype="http://schema.org/Question">
+    <h3 class="card__title" itemprop="name">I’m invested in equities</h3>
+    <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+      <div itemprop="text">
+        <h4 class="chart-title">S&P 500 has doubled since 2009</h4>
+        <div class="responsive-date-line"
+            data-source="http://interactivegraphics.ft-static.com/data/when-rates-rise/s&p500.csv">
+        </div>
+        <div class="source">Source: Bloomberg</div>
+      </div>
+    </div>
+  </section> 
+
+  <section class="card" itemscope itemtype="http://schema.org/Question">
     <h3 class="card__title" itemprop="name">Why is the Fed considering raising interest rates now?</h3>
     <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
       <div itemprop="text">
-      <p>America has seen its longest private sector hiring spurt on record, and unemployment has halved since its peak. The Fed thinks the hot jobs market could spur a pickup in inflation and wages. Given it is tasked with keeping inflation low, it is considering raising the cost of borrowing to keep the economy on an even keel.</p>
+        <p>America has seen its longest private sector hiring spurt on record, and unemployment has halved since its peak. The Fed thinks the hot jobs market could spur a pickup in inflation and wages. Given it is tasked with keeping inflation low, it is considering raising the cost of borrowing to keep the economy on an even keel.</p>
+        <h4 class="chart-title">Unemployment has halved since its peak in 2009</h4>
+        <p class="chart-subtitle">%</p>
+        <div class="responsive-date-line"
+            data-baseline="0"
+            data-source="http://interactivegraphics.ft-static.com/data/bloomberg-economics/us-unemployment.csv">
+        </div>
+        <div class="source">Source: Bloomberg</div>
       </div>
     </div>
   </section> 
@@ -125,7 +168,12 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
     <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
       <div itemprop="text">
       <p>The US was clobbered by the crash in its housing market and banking sector between 2007-09. The Fed felt it needed to pull out all of the stops to prevent the economy from collapsing into a new Great Depression. One way of keeping things afloat was by cutting the cost of borrowing to rock-bottom levels.</p>
-      </div>
+      <h4 class="chart-title">Federal funds effective interest rate</h4>
+      <p class="chart-subtitle">%</p>
+      <div class="responsive-date-line"
+            data-baseline="0"
+            data-source="http://interactivegraphics.ft-static.com/data/bloomberg-economics/us-fed-effective.csv"></div>
+      <div class="source">Source: Bloomberg</div>
     </div>
   </section>
 
@@ -133,7 +181,7 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
     <h3 class="card__title" itemprop="name">Is the US economy ready to cope with interest rate rises?</h3>
     <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
       <div itemprop="text">
-      <p>That is the trillion dollar question - and opinions vary widely. To optimists, the Fed has managed to engineer a respectable recovery that is outshining many other economies around the world. They say a quarter-point increase would have a negligible impact but is a sensible first step to ensure the Fed stays ahead of inflation. Sceptics warn that inflation remains on the floor and the Fed risks roiling world markets and pushing up the dollar if it acts too soon.</p>
+        <p>That is the trillion dollar question - and opinions vary widely. To optimists, the Fed has managed to engineer a respectable recovery that is outshining many other economies around the world. They say a quarter-point increase would have a negligible impact but is a sensible first step to ensure the Fed stays ahead of inflation. Sceptics warn that inflation remains on the floor and the Fed risks roiling world markets and pushing up the dollar if it acts too soon.</p>
       </div>
     </div>
   </section>
@@ -142,8 +190,9 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
     <h3 class="card__title" itemprop="name">How fast are rates likely to rise?</h3>
     <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
       <div itemprop="text">
-      Not fast at all - if the Fed is to be believed. One of the mantras adopted by Chair Janet Yellen this year has been that rate rises will be gradual. The pace of increases - when they eventually start - is expected to be less than half the tempo of the Fed’s last round of rate rises, which started in 2004. And the ultimate rate they stop at is likely to be very low too, at not much more than 3 per cent.
-      <h4>Federal reserve interest rate predictions</h4>
+      <p>Not fast at all - if the Fed is to be believed. One of the mantras adopted by Chair Janet Yellen this year has been that rate rises will be gradual. The pace of increases - when they eventually start - is expected to be less than half the tempo of the Fed’s last round of rate rises, which started in 2004. And the ultimate rate they stop at is likely to be very low too, at not much more than 3 per cent.</p>
+      <h4 class="chart-title">Federal reserve interest rate predictions</h4>
+      <p class="chart-subtitle">Median values are highlighted</p>
       <div class="dot-plot" data-source="http://ig.ft.com/data/federal-reserve-meeting/latest.json"></div>
       <div class="source">Source: Federal Reserve</div>
     </div>
@@ -154,10 +203,9 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
     <h3 class="card__title" itemprop="name">Will they return to the levels seen pre-crisis?</h3>
     <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
       <div itemprop="text">
-      <p>Not for the foreseeable future, according to Fed policymakers’ own projections. The Fed believes the rate compatible with stable growth and prices has sunk sharply because of the lingering effects of the crisis and will only increase very gradually. In this subdued post-crisis world, the central bank will need to keep its foot on the accelerator for some time to come.</p>
+        <p>Not for the foreseeable future, according to Fed policymakers’ own projections. The Fed believes the rate compatible with stable growth and prices has sunk sharply because of the lingering effects of the crisis and will only increase very gradually. In this subdued post-crisis world, the central bank will need to keep its foot on the accelerator for some time to come.</p>
       </div>
     </div>
-    <hr class="card__splitter">
   </section>
 
   <section class="card" itemscope itemtype="http://schema.org/Question">
@@ -167,7 +215,6 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
       <p>Adjusting the federal funds rate - the rate banks charge each other for short-term loans - affects other short term rates paid by firms and households. These movements also have knock-on effects on long-term rates, including mortgages and corporate bonds. Changes in long-term rates will have an influence on asset prices, including the equity market. During the crisis the Fed also purchased longer-term mortgage backed securities and Treasury bonds to lower the level of long-term rates.</p>
       </div>
     </div>
-    <hr class="card__splitter">
   </section>
 
 
@@ -177,28 +224,6 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
       <div itemprop="text">
       </div>
     </div>
-    <hr class="card__splitter">
-  </section>
-
-
-
-  <section class="card" itemscope itemtype="http://schema.org/Question">
-    <h3 class="card__title" itemprop="name">Will the UK automatically follow the US in raising rates?</h3>
-    <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
-      <div itemprop="text">
-        <p>There is no automatic or formal link between US and UK interest rates but the widespread expectation is that the Bank of England will be the next central bank after the US to raise rates. The UK’s economic recovery is well on track, with solid growth and a strong labour market.</p>
-        <p>Historically, US and UK market interest rates, as measured by government bond yields, have also moved in tandem. These are the rates, set by the financial markets that feed down into the real costs of borrowing for households and companies.</p>
-      </div>
-    </div>
-    <hr class="card__splitter">
-  </section>
-  
-  <section class="card" itemscope itemtype="http://schema.org/Question" style="max-width:1200px;background-color:transparent;box-shadow:none;border:1px solid #CEC6B9;border-left:none;border-right:none;">
-    
-      <div itemprop="text">
-        <p>There is no automatic or formal link between US and UK interest rates but the widespread expectation is that the Bank of England will be the next central bank after the US to raise rates. The UK’s economic recovery is well on track, with solid growth and a strong labour market.</p>
-        <p>Historically, US and UK market interest rates, as measured by government bond yields, have also moved in tandem. These are the rates, set by the financial markets that feed down into the real costs of borrowing for households and companies.</p>
-      </div>
   </section>
 
   <section class="card" itemscope itemtype="http://schema.org/Question">
@@ -206,10 +231,10 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
     <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
       <div itemprop="text">
         <p>There is no automatic or formal link between US and UK interest rates but the widespread expectation is that the Bank of England will be the next central bank after the US to raise rates. The UK’s economic recovery is well on track, with solid growth and a strong labour market.</p>
-        <h4>The Bank of England typically follows the Federal Reserve's lead</h4>
+        <h4 class="chart-title">The Bank of England typically follows the Federal Reserve's lead</h4>
+        <p class="chart-subtitle">%</p>
         <div class="responsive-date-line"
-            data-source="http://interactivegraphics.ft-static.com/data/bloomberg-economics/fed-target-and-base-rate.csv">
-        </div>
+            data-source="http://interactivegraphics.ft-static.com/data/bloomberg-economics/fed-target-and-base-rate.csv"></div>
         <div class="source">Source: Bloomberg</div>
         <p>Historically, US and UK market interest rates, as measured by government bond yields, have also moved in tandem. These are the rates, set by the financial markets that feed down into the real costs of borrowing for households and companies.</p>
         <div class="responsive-date-line"
@@ -284,7 +309,7 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
     </div>
   </article>
   </a>
-  <h3 class="section__subtitle">Postcards</h3>
+  <h3 class="section__subtitle">Global impact</h3>
 
   <div class="card__group card--comment">
 

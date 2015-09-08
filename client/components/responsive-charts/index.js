@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
 					height: bounds.height,
 					width: bounds.width
 				});
-
+			var baseline = this.dataset.baseline;
 			d3.csv(this.dataset.source, function(data){
 				var chart = responsiveLine()
-								.data(data)
+								.data(data, baseline)
 								.keyLables({
-									'Fed target':'Fed target rate (%)',
-									'base rate':'BoE base rate (%)',
+									'Fed target':'Fed target rate',
+									'base rate':'BoE base rate',
 									'US 10yr bond':'10yr US bond yield',
 									'10yr bond':'10yr UK bond yield'
 								});

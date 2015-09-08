@@ -16,20 +16,11 @@
   top: 0;
 }
 
-@media (min-width:660px) {
-  .reading-nav a.reading-nav__ft {
-    position: absolute;
-    left: 10px;
-    top: 13px;
-    padding: 0;
-  }
-}
-
 .reading-nav::-webkit-scrollbar { display: none; }
 
 .reading-nav a{
   display: inline-block;
-  padding: .9em .6em;
+  padding: 20px .6em;
   text-align: center;
   font-family: 'MetricWeb', sans-serif;
   letter-spacing: .01em;
@@ -39,10 +30,27 @@
   font-weight: 600;
   font-size: 18px;
 }
-
 .reading-nav a.selected,
 .reading-nav a:hover {
-  opacity: 1;
+  opacity: .9;
+}
+
+.reading-nav a.selected {
+  background: linear-gradient(to bottom, transparent 50%, #333 100%);
+}
+
+.reading-nav a.reading-nav__ft {
+  padding: 13px 10px;
+  float: left;
+}
+
+@media (min-width:660px) {
+  .reading-nav a.reading-nav__ft {
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    padding: 0;
+  }
 }
 
 #reading-marker {
