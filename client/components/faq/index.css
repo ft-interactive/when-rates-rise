@@ -16,14 +16,14 @@
 }
 
 .faq-nav li {
-  text-indent: -1.5em;
-  padding-left: 1.5em;
+  text-indent: -.6em;
+  padding-left: .6em;
   margin: .6em 0;
-  line-height: .95;
+  line-height: 1;
 }
 
 .faq-nav__section {
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1em;
 }
