@@ -129,7 +129,7 @@ window.addEventListener('scroll', function(){
       if (r.height > 0 && r.bottom > top_half && r.top < top_half) {
         // pushState does not trigger a hashchange event
         history.replaceState(null, '', h);
-        set_nav_item(h);
+        set_nav_item(h, true);
         break;
       }
     }
@@ -140,6 +140,10 @@ window.addEventListener('scroll', function(){
 
 window.addEventListener('resize', function(){
   // TODO: debounce
+  set_nav_item(location.hash, false, true);
+});
+
+window.addEventListener('onload', function(){
   set_nav_item(location.hash, false, true);
 });
 
