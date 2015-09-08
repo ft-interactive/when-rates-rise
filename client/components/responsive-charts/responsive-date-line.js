@@ -3,7 +3,7 @@ function responsiveLine(){
 		yScale = d3.scale.linear(),
 		valueDomain,
 		dateDomain,
-		margins = {top:40, left:20, bottom:30, right:30 },
+		margins = {top:40, left:20, bottom:30, right:40 },
 		data = [],
 		annotations = [],
 		lineData = {},
