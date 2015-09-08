@@ -1,5 +1,5 @@
 .cover {
-  background: #fff1e0 url('bg-desktop.png') no-repeat;
+  background: #fff1e0 url('https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftdata.co.uk%2Fstatic%2Fsites%2Fwhen-rates-rise%2Flanding-page%2Fbg-desktop.png?source=ig_wwr&width=700&quality=highest') no-repeat;
   background-position: center 141px;
   background-size: 700px auto;
   position: relative;
@@ -82,7 +82,7 @@
 
 @media (max-width:600px) {
   .cover {
-    background-image: url('bg.png');
+    background-image: url('https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftdata.co.uk%2Fstatic%2Fsites%2Fwhen-rates-rise%2Flanding-page%2Fbg.png?source=ig_wwr&width=600&quality=highest');
     background-position: center 13vh;
     background-size: 100% auto;
     padding-top: .5em;
