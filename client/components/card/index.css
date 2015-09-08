@@ -212,3 +212,13 @@ a.card .card__header:hover .pullquote{
   }
 }
 
+.card__body .pullquote {
+  font-family: 'FinancierTextWeb', serif;
+  font-style: italic;
+  font-size: 1.2em;
+  border-left: 8px solid #B7AFA1;
+  padding-left: 20px;
+  margin-left: 47px;
+  margin-top: .5em;
+}
+
