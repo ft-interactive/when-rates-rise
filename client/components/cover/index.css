@@ -111,4 +111,13 @@
   }
 }
 
+@media (min-device-height: 320px) and (max-device-height: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .cover nav a {
+    padding: .5em .3em;
+    font-size: .8em;
+  }
+}
+
 
