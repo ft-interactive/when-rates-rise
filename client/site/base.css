@@ -15,3 +15,12 @@ body {
   margin: 0;
   scroll-behavior: smooth;
 }
+
+.img--full {
+  width: 90%;
+  max-width: 460px;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+  padding: 0;
+}
