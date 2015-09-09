@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>swiss-flag</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,22 C0.797471037,31.8691678 9.43339924,40 20,40 C31.0325488,40 40,31.037037 40,20 C40,9.35173039 31.7146014,0.658300861 21,0 L19,0 C8.74312794,0.625735001 0.765000011,8.51127386 0,18 L0,22 L0,22 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mobile--rates-explained-Copy" sketch:type="MSArtboardGroup" transform="translate(-70.000000, -2170.000000)">
+            <g id="swiss-flag" sketch:type="MSLayerGroup" transform="translate(70.000000, 2170.000000)">
+                <g id="Group-3">
+                    <mask id="mask-2" sketch:name="Clip 2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M0,0 L40,0 L40,40 L0,40 L0,0 Z" id="Fill-1" fill="#E94B37" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                </g>
+                <path d="M35,14.850496 L24.150496,14.850496 L24.150496,4 L14.850496,4 L14.850496,14.850496 L4,14.850496 L4,24.150496 L14.850496,24.150496 L14.850496,35 L24.150496,35 L24.150496,24.150496 L35,24.150496 L35,14.850496" id="Fill-4" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
