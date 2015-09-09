@@ -49,6 +49,7 @@ a.card:hover .card__header .card__kicker {
   font-size: .7rem;
   display: block;
   letter-spacing: .035em;
+  margin-bottom: .2em;
 }
 
 .card__title {
@@ -74,7 +75,7 @@ a.card:hover .card__header .card__kicker {
 
 .card__body {
   clear: both;
-  color: #787878;
+  color: #656565;
   font-family: 'FinancierTextWeb', serif;
   line-height: 1.25;
 }
