@@ -71,7 +71,7 @@ function ordinalAxis(){
 function dotPlot(){
 	var  xScale = d3.scale.ordinal(),
 		yScale = d3.scale.linear(),
-		margins = {top:20, left:20, bottom:30, right:30 },
+		margins = {top:20, left:0, bottom:30, right:30 },
 		data = [];
 
 	function chart(g){
