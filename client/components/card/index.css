@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.card__title:before { 
+.card__title[id]:before { 
   display: block; 
   content: " "; 
   height: 75px;      /* Give height of your fixed element */
@@ -37,8 +37,8 @@ a.card:after {
   margin: 0 7px 13px 0;
 }
 
-a.card .card__header:hover .card__title,
-a.card .card__header:hover .card__kicker {
+a.card:hover .card__header .card__title,
+a.card:hover .card__header .card__kicker {
   text-decoration: underline;
 }
 
