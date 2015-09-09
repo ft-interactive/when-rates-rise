@@ -27,7 +27,8 @@ a.card {
 
 a.card:after {
   content: " ";
-  background: url('https://image.webservices.ft.com/v1/images/raw/fticon:arrow-right?height=20&tint=333333,333333&source=ig_wrr') no-repeat center center;
+  background: url('https://image.webservices.ft.com/v1/images/raw/fticon:arrow-right?height=44&tint=333333,333333&source=ig_wrr') no-repeat center center;
+  background-size: 20px 20px;
   position: absolute;
   bottom: 0;
   right: 0;
