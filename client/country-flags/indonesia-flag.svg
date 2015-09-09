@@ -1,23 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
-    <title>indonesia-flag</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path id="path-1" d="M0,21.5423613 C0.797471037,31.8691678 9.43339924,40 19.9699549,40 C31.0325488,40 40,31.037037 40,19.97998 C40,9.35173039 31.7146014,0.658300861 21.2471674,0 L18.6927424,0 C8.74312794,0.625735001 0.765000011,8.51127386 2.23552607e-13,18.4175986 L2.23427519e-13,21.5423613 L0,21.5423613 Z"></path>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Mobile--rates-explained-Copy" sketch:type="MSArtboardGroup" transform="translate(-22.000000, -1421.000000)">
-            <g id="indonesia-flag" sketch:type="MSLayerGroup" transform="translate(22.000000, 1421.000000)">
-                <g id="indonesian-flag">
-                    <mask id="mask-2" sketch:name="Clip 2" fill="white">
-                        <use xlink:href="#path-1"></use>
-                    </mask>
-                    <g id="Clip-2"></g>
-                    <path d="M0,0 L40,0 L40,20 L0,20 L0,0 Z" id="Fill-1" fill="#E94B37" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
-                    <path d="M0,20 L40,20 L40,40 L0,40 L0,20 Z" id="Fill-3" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="a" d="M0 21.542C.797 31.87 9.433 40 19.97 40 31.033 40 40 31.037 40 19.98 40 9.352 31.715.658 21.247 0h-2.554C8.743.626.765 8.51 0 18.418v3.124z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="b" fill="#fff">
+      <use xlink:href="#a"/>
+    </mask>
+    <path fill="#E94B37" d="M0 0h40v20H0V0z" mask="url(#b)"/>
+    <path fill="#FFF" d="M0 20h40v20H0V20z" mask="url(#b)"/>
+  </g>
 </svg>

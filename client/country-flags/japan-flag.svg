@@ -1,17 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
-    <title>japan-flag</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Mobile--rates-explained-Copy" sketch:type="MSArtboardGroup" transform="translate(-23.000000, -1813.000000)">
-            <g id="japan-flag" sketch:type="MSLayerGroup" transform="translate(23.000000, 1813.000000)">
-                <g id="Imported-Layers" sketch:type="MSShapeGroup">
-                    <path d="M0,20 C0,31.046 8.954,40 20,40 C31.046,40 40,31.046 40,20 C40,8.954 31.046,0 20,0 C8.954,0 0,8.954 0,20" id="Fill-1" fill="#FFFFFF"></path>
-                    <path d="M7.55,19.95 C7.55,26.854 13.146,32.45 20.05,32.45 C26.954,32.45 32.55,26.854 32.55,19.95 C32.55,13.045 26.954,7.45 20.05,7.45 C13.146,7.45 7.55,13.045 7.55,19.95" id="Fill-2" fill="#E94B37"></path>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#FFF" d="M0 20c0 11.046 8.954 20 20 20s20-8.954 20-20S31.046 0 20 0 0 8.954 0 20"/>
+    <path fill="#E94B37" d="M7.55 19.95c0 6.904 5.596 12.5 12.5 12.5s12.5-5.596 12.5-12.5c0-6.905-5.596-12.5-12.5-12.5s-12.5 5.595-12.5 12.5"/>
+  </g>
 </svg>
