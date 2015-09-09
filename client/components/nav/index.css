@@ -8,9 +8,8 @@
   -webkit-scroll-behavior: smooth;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  /*border-bottom: 1px solid #A39D94;*/
-  /*box-shadow: 0 1px 3px #A39D94;*/
-  top:-100px;
+  box-shadow: 0 0px 4px rgba(0,0,0,.5);
+  top:-75px;
 }
 
 .on {
@@ -22,7 +21,7 @@
 
 .reading-nav a{
   display: inline-block;
-  padding: 17px .6em;
+  padding: 15px 11px;
   text-align: center;
   font-family: 'MetricWeb', sans-serif;
   letter-spacing: .01em;
@@ -43,15 +42,18 @@
 }
 
 .reading-nav a.reading-nav__ft {
-  padding: 10px;
+  padding: 9px 13px 9px 10px;
   float: left;
+  line-height: 0;
 }
 
 @media (min-width:660px) {
   .reading-nav a.reading-nav__ft {
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 9px;
+    width: 30px;
+    height: 30px;
     padding: 0;
   }
 }

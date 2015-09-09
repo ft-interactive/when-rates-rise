@@ -1,17 +1,16 @@
 .cover {
   background: #fff1e0 url('https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftdata.co.uk%2Fstatic%2Fsites%2Fwhen-rates-rise%2Flanding-page%2Fbg-desktop.png?source=ig_wrr&width=700&quality=highest') no-repeat;
-  background-position: center 141px;
+  background-position: center 120px;
   background-size: 700px auto;
   position: relative;
-  margin: 0 0 1em 0;
-  padding-top: 30px;
+  margin: 0 0 18px 0;
 }
 
 .cover h1 {
- margin-top: -.2em;
+ margin: 0 auto;
+ position: relative;
  text-align: center;
  font-weight: 600;
- /*font-family: 'FinancierDisplayWeb', serif;*/
  font-size: 66px;
  color: #43423E;
 }
@@ -19,13 +18,13 @@
 .cover nav {
   margin: 0 auto;
   max-width: 820px;
-  border-spacing: 1em;
-  margin-top: 625px;
+  border-spacing: 18px;
+  margin-top: 615px;
 }
 
 .cover nav a {
   display: table-cell;
-  padding: .7em .3em;
+  padding: 13px 6px;
   font-weight: 400;
   background-color: #DCD7CE;
   border-radius: 5px;
@@ -36,9 +35,9 @@
   /*text-transform: uppercase;*/
   text-decoration: none;
   box-shadow: 0 1px 2px #74736C;
-  font-family: FinancierDisplayWeb;
+  font-family: 'FinancierDisplayWeb', serif;
   letter-spacing: 0.4px;
-  font-size: 1em;
+  font-size: 18px;
 }
 
 .cover nav a:hover {
@@ -50,7 +49,9 @@
   margin: 0 auto;
   width: 50%;
   max-width: 200px;
-  padding: .5em;
+  padding: 9px;
+  position: relative;
+  top: 15px;
 }
 
 .cover .logo img {
@@ -75,48 +76,42 @@
     display: block;
     width: 80%;
     max-width: 500px;
-    margin: .7em auto;
+    margin: 13px auto;
   }
 
 }
 
 @media (max-width:600px) {
   .cover {
-    background-image: url('https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftdata.co.uk%2Fstatic%2Fsites%2Fwhen-rates-rise%2Flanding-page%2Fbg.png?source=ig_wrr&width=600&quality=highest');
-    background-position: center 13vh;
+    background-image: url('https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftdata.co.uk%2Fstatic%2Fsites%2Fwhen-rates-rise%2Flanding-page%2Fbg.png?source=ig_wrr&width=550&quality=highest');
+    background-position: center 70px;
     background-size: 100% auto;
-    padding-top: .5em;
-    height: 100vh;
+    padding-bottom: 135%;
   }
 
   .cover h1 {
-   margin-top: -.2em;
-   font-size: 2.3em;
+   font-size: 40px;
+   top: -14px;
   }
 
   .cover nav {
     position: absolute;
-    bottom: .5em;
+    bottom: 8px;
     width: 100%;
     margin-top: 0;
   }
 
   .cover nav a {
+    padding: 9px 4px;
     background-color: rgba(255, 255, 255, 0.7);
   }
 
-  
   .cover nav a:hover {
     background-color: rgba(255, 255, 255, 0.85);
   }
-}
 
-@media (min-device-height: 320px) and (max-device-height: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-  .cover nav a {
-    padding: .5em .3em;
-    font-size: .8em;
+  .cover .logo {
+    top: 0;
   }
 }
 
