@@ -52,6 +52,7 @@
   padding: 9px;
   position: relative;
   top: 15px;
+  z-index: 2;
 }
 
 .cover .logo img {
