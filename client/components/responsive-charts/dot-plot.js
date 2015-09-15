@@ -169,7 +169,7 @@ function dotPlot(){
 			});
 
 		g.select('.data-points')
-			.selectAll('g').data(data)
+			.selectAll('g.set').data(data)
 				.enter().append('g').attr('class','set')
 
 		g.selectAll('.set')
