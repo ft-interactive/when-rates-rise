@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch": "srvlr -u client"
+    "watch": "srvlr -A localhost -u client"
   },
   "devDependencies": {
     "srvlr": "^0.4.0"
