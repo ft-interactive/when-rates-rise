@@ -78,4 +78,37 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		});
 
+	d3.selectAll('.market-probability')
+		.each(function(){
+			var parent = d3.select(this);
+			var bounds = parent.node().getBoundingClientRect();
+			var svg = parent.append('svg')
+				.attr({
+					height:bounds.height,
+					width:bounds.width
+				});
+			var dataset = this.dataset;
+			d3.json(dataset.interestRateProbabilitySource, function(data){
+				//console.log('got interest rate probabilities', data);
+				data = data.map(function(d){ 
+					d.date = new Date(d.date); 
+					return d; 
+				});
+				
+				var chart = marketProbability()
+					.probabilityTree(data);
+
+				resizeHandlers.push(debounce(function (){
+					var bounds = parent.node().getBoundingClientRect();
+					svg.attr({
+						width: bounds.width,
+						height: bounds.height
+					});
+					svg.call(chart);
+				}, 125));
+
+				svg.call(chart);
+			});
+		})
+
 });

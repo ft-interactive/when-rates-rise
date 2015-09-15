@@ -24,7 +24,7 @@ p.chart-subtitle{
 	color: #333333;
 }
 
-.responsive-date-line, .dot-plot {
+.responsive-date-line, .dot-plot, .market-probability {
 	height: 300px;
 	font-family: "MetricWeb", sans-serif;
 }
@@ -143,4 +143,6 @@ p.chart-subtitle{
   font-weight: 600;
 }
 
-
+.probability-distribution{
+	fill-opacity: 0.2;
+}

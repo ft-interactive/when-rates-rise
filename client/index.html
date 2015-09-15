@@ -26,6 +26,7 @@
 <script src="components/d3/d3.v3.min.js"></script>
 <script src="components/responsive-charts/responsive-date-line.js"></script>
 <script src="components/responsive-charts/dot-plot.js"></script>
+<script src="components/responsive-charts/probability-table.js"></script>
 <link rel="shortcut icon" href="http://im.ft-static.com/m/icons/favicon.ico" type="image/x-icon"/><link rel="apple-touch-icon" href="http://im.ft-static.com/m/icons/apple-touch-icon.png"/>
 </head>
 <body>
@@ -185,6 +186,21 @@ var FT = FT || {}; FT.Properties = FT.Properties || {}; FT.Properties.ENV = 'p';
     </div>
   </section> 
 -->
+
+  <section  class="card" itemscope itemtype="http://schema.org/Question">
+    <h3 id="the-future" class="card__title" itemprop="name">What does the future hold?</h3>
+    <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+      <div itemprop="text">
+        <p>By using contract prices for 30 day federal fund futures it's possible to calculate a probability distribution for what the market  &quot;thinks&quot; the rate might be after a given meeting of the federal reserve.</p>
+        <h4 class="chart-title">What does the market &quot;think&quot;?</h4>
+        <div class="market-probability" 
+          data-interest-rate-probability-source="http://ig.ft.com/data/fed-fund-futures/probability-tree.json">
+        </div>
+        <div class="source">Source: CME Group</div>
+      </div>
+    </div>
+  </section> 
+
   <section  class="card" itemscope itemtype="http://schema.org/Question">
     <h3 id="faq-why-now" class="card__title" itemprop="name">Why is the Fed considering raising interest rates now?</h3>
     <div class="card__body" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
