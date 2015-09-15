@@ -13,7 +13,7 @@ function marketProbability(){
 			plotWidth = bounds.width - (margins.left + margins.right),
 			plotHeight = bounds.height - (margins.top + margins.bottom);
 
-		var valueDomain = [0, rateIncrement * ( data[data.length-1].distribution.length )];
+		var valueDomain = [0, rateIncrement + rateIncrement * ( data[data.length-1].distribution.length )];
 		var dateDomain = data.map(function(d){ return d.date; });
 		var meetingLabelWidth = plotWidth/3 - gutter/2;
 		var probabilityColumnWidth = 2*plotWidth/3 - gutter/2;
@@ -35,28 +35,33 @@ function marketProbability(){
 
 		g.selectAll('.axis-label')
 			.attr({
-				y:2*margins.top/3,
+				y:margins.top-4,
 				x:function(d){
-					return plotWidth - probabilityColumnWidth + xScale(d) + xScale(rateIncrement)/2
+					return plotWidth - probabilityColumnWidth + xScale(d);
 				},
-				'text-anchor':'middle',
 				'font-size':function(){
 							if(plotWidth>580) return '';
 							if(plotWidth>400) return '14px';
 							return '10px'
-						}
-			}).text(function(d){return d})
+						},
+				'text-anchor':'middle'
+			}).text(function(d){
+				if(d === 0) return d;
+				if(d%1 === 0) return d+'.0';
+				if(d%0.5 === 0) return d;
+				return '';
+			})
 
 		g.selectAll('.axis-line')
 			.attr({
 				x1:function(d){
-					return plotWidth - probabilityColumnWidth + xScale(d) + xScale(rateIncrement)/2
+					return plotWidth - probabilityColumnWidth + xScale(d);
 				},
 				y1:margins.top,
 				x2:function(d){
-					return plotWidth - probabilityColumnWidth + xScale(d) + xScale(rateIncrement)/2
+					return plotWidth - probabilityColumnWidth + xScale(d);
 				},
-				y2:plotHeight
+				y2:plotHeight + margins.top
 			});
 		
 
