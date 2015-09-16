@@ -29,6 +29,10 @@ p.chart-subtitle{
 	font-family: "MetricWeb", sans-serif;
 }
 
+.market-probability {
+	height: 900px;
+	font-family: "MetricWeb", sans-serif;
+}
 .domain {
 	fill: none;
 }
@@ -48,7 +52,7 @@ p.chart-subtitle{
 	fill:#787878;
 }
 
-.y.axis line{
+.y.axis line, .axis-line{
 	stroke: #ddd;
 	stroke-width: 1px;
 	shape-rendering: cripsEdges;
@@ -98,7 +102,7 @@ p.chart-subtitle{
 		shape-rendering: cripsEdges;
 	}
 
-.y.axis line {
+.y.axis line, .axis-line {
 		stroke-dasharray: 2, 2;
 	}
 
@@ -140,7 +144,17 @@ p.chart-subtitle{
 
 .median-label {
 	fill-opacity: 0.7;
-  font-weight: 600;
+ 	font-weight: 600;
 }
 
+.probability-distribution{
+	fill: #af516c;
+}
 
+.probability-distribution text{
+	fill: #af516c;
+}
+.probability{
+	fill:#bb6d82;
+	shape-rendering: cripsEdges;
+}
