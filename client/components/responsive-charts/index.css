@@ -153,8 +153,15 @@ p.chart-subtitle{
 
 .probability-distribution text{
 	fill: #af516c;
+	font-weight: 400;
+	font-size: 12px;
 }
 .probability{
-	fill:#bb6d82;
+	fill:#870f33;
 	shape-rendering: cripsEdges;
+}
+
+.meeting-label {
+	font-weight: 400;
+	font-size: 18px;
 }

@@ -52,6 +52,23 @@ function marketProbability(){
 				return '';
 			})
 
+		g.selectAll('.axis-title').data([0]).enter()
+			.append('text')
+				.attr({
+					class:'axis-title',
+					y:margins.top-24,
+					x:function(){
+						return plotWidth - probabilityColumnWidth;
+					},
+					'font-size':function(){
+							if(plotWidth>580) return '';
+							if(plotWidth>400) return '14px';
+							return '10px'
+						}
+				
+				}).text('Federal funds effective interest rate')
+
+
 		g.selectAll('.axis-line')
 			.attr({
 				x1:function(d){
@@ -100,7 +117,7 @@ function marketProbability(){
 						.text(function(d){
 							var rounded = Math.round(d * 10) / 10;
 							if (rounded === 0) return '';
-							return rounded;
+							return rounded*100 + "%";
 						});
 
 				parent.selectAll('.probability-label')
@@ -128,7 +145,12 @@ function marketProbability(){
 							if(distributionYScale(d)<1) return 1;
 							return distributionYScale(d);
 						},
-						width:xScale(0.25)
+						width:xScale(0.25),
+						opacity:function(d){
+							var rounded = Math.round(d * 10) / 10;
+							if (rounded === 0) return 0.1;
+							return rounded;
+						}
 					})
 			});
 
