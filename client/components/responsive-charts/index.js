@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				});
 			var dataset = this.dataset;
 			d3.json(dataset.interestRateProbabilitySource, function(data){
-
+				console.log(data)
 				data = data.map(function(d){ 
 					d.date = new Date(d.date); 
 					return d; 

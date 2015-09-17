@@ -157,11 +157,10 @@ p.chart-subtitle{
 	font-size: 12px;
 }
 .probability{
-	fill:#870f33;
+	fill:#bb6d82;
 	shape-rendering: cripsEdges;
 }
 
 .meeting-label {
 	font-weight: 400;
-	font-size: 18px;
 }
