@@ -2,7 +2,7 @@ function ordinalAxis(){
 	var scale,
 		tickSize = 10,
 		tickOffset = 10,
-		tickPadding = 15,
+		tickPadding = 25,
 		orient = 'bottom',
 		margins = {top:0,left:0,bottom:0,right:0};
 
