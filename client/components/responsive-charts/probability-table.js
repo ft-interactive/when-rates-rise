@@ -6,7 +6,7 @@ function marketProbability(){
 		gutter = 20,
 		data = [],
 		rateIncrement = 0.25,
-		meetingDate = d3.time.format('%d %b %Y');
+		meetingDate = d3.time.format('%b %d %Y');
 
 	function chart(g){
 		var bounds = g.node().getBoundingClientRect(),
