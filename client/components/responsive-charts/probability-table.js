@@ -15,8 +15,8 @@ function marketProbability(){
 
 		var valueDomain = [0, rateIncrement + rateIncrement * ( data[data.length-1].distribution.length )];
 		var dateDomain = data.map(function(d){ return d.date; });
-		var meetingLabelWidth = plotWidth/3 - gutter/2;
-		var probabilityColumnWidth = 2*plotWidth/3 - gutter/2;
+		var meetingLabelWidth = plotWidth/4 - gutter/2;
+		var probabilityColumnWidth = 3*plotWidth/4 - gutter/2;
 
 		xScale.domain(valueDomain).range([ 0, probabilityColumnWidth ]);
 		yScale.domain(dateDomain).rangeBands([ 0, plotHeight ]);
@@ -54,19 +54,22 @@ function marketProbability(){
 
 		g.selectAll('.axis-title').data([0]).enter()
 			.append('text')
-				.attr({
-					class:'axis-title',
-					y:margins.top-24,
-					x:function(){
-						return plotWidth - probabilityColumnWidth;
-					},
-					'font-size':function(){
-							if(plotWidth>580) return '';
-							if(plotWidth>400) return '14px';
-							return '10px'
-						}
+				.text('Federal funds effective interest rate')
+				.attr('class','axis-title');
 				
-				}).text('Federal funds effective interest rate')
+		g.selectAll('.axis-title')
+			.attr({
+				y:margins.top-24,
+				x:function(){
+					return plotWidth - probabilityColumnWidth;
+				},
+				'font-size':function(){
+						if(plotWidth>580) return '';
+						return '14px';
+						//return '10px'
+					}
+			
+			})
 
 
 		g.selectAll('.axis-line')
@@ -115,9 +118,9 @@ function marketProbability(){
 				dataEnter.append('text')
 					.attr('class','probability-label')
 						.text(function(d){
-							var rounded = Math.round(d * 10) / 10;
+							var rounded = Math.round(d * 100);
 							if (rounded === 0) return '';
-							return rounded*100 + "%";
+							return rounded + "%";
 						});
 
 				parent.selectAll('.probability-label')
@@ -145,12 +148,7 @@ function marketProbability(){
 							if(distributionYScale(d)<1) return 1;
 							return distributionYScale(d);
 						},
-						width:xScale(0.25),
-						opacity:function(d){
-							var rounded = Math.round(d * 10) / 10;
-							if (rounded === 0) return 0.1;
-							return rounded;
-						}
+						width:xScale(0.25)
 					})
 			});
 
@@ -171,7 +169,11 @@ function marketProbability(){
 				'transform':function(d,i){
 								return 'translate(' + meetingLabelWidth + ', ' + (margins.top + yScale(d) + yScale.rangeBand()) + ')';
 							},
-				'text-anchor':'end'
+				'text-anchor':'end',
+				'font-size':function(){
+					if(plotWidth>400) return '';
+					return '14px';
+				}
 			})
 			.text(function(d){
 				return meetingDate(d);
