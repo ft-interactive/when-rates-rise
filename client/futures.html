@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title>Rate rise probability</title>
+	<link rel="stylesheet" href="components/responsive-charts/index.css">
+	<link rel="stylesheet" href="site/base.css">
+	<script src="components/responsive-charts/probability-table.js"></script>
+	<script src="https://cdn.polyfill.io/v1/polyfill.min.js"></script>
+<script src="components/d3/d3.v3.min.js"></script>
+</head>
+<body>
+<h1 class="sidebar-title">How fast will US rates rise?</h1>
+<p class="sidebar-subtitle">Probilities calculated from Fed funds futures prices</p>
+<div class="market-probability-sidebar" 
+data-interest-rate-probability-source="https://ig.ft.com/data/fed-fund-futures/probability-tree.json">
+</div>
+<div class="source">Source: CME Group, updated hourly</div>
+
+<script>
+var resizeHandlers = [];
+
+function debounce (fn, timeout) {
+  var timeoutID = -1;
+  return function() {
+    if (timeoutID > -1) {
+      window.clearTimeout(timeoutID);
+    }
+    timeoutID = window.setTimeout(fn, timeout);
+  }
+};
+
+
+//Month path
+function monthPath(t0) {
+	var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+		d0 = t0.getDay(), w0 = d3.time.weekOfYear(t0),
+		d1 = t1.getDay(), w1 = d3.time.weekOfYear(t1);
+	return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
+		+ "H" + w0 * cellSize + "V" + 7 * cellSize
+		+ "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+		+ "H" + (w1 + 1) * cellSize + "V" + 0
+		+ "H" + (w0 + 1) * cellSize + "Z";
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	d3.select(window).on('resize', function(){
+		resizeHandlers.forEach(function(f){
+			f();
+		})
+	});
+
+	d3.selectAll('.market-probability-sidebar')
+		.each(function(){
+			var parent = d3.select(this);
+			var bounds = parent.node().getBoundingClientRect();
+			var svg = parent.append('svg')
+				.attr({
+					height:bounds.height,
+					width:bounds.width
+				});
+			if(window.location.hash){
+				console.log('hello!', window.location.hash)
+				var source = "http://ig.ft.com/data/fed-fund-futures/probability-tree-" + window.location.hash.replace('#','') + ".json";
+			}else{
+				source = this.dataset.interestRateProbabilitySource;
+			}
+			console.log(source);
+			d3.json(source, function(data){
+
+				data = data.map(function(d){ 
+					d.date = new Date(d.date); 
+					return d; 
+				});
+
+				data = data.slice(0,5);
+				
+				var chart = marketProbability()
+					.probabilityTree(data);
+
+				resizeHandlers.push(debounce(function (){
+					var bounds = parent.node().getBoundingClientRect();
+					svg.attr({
+						width: bounds.width,
+						height: bounds.height
+					});
+					svg.call(chart);
+				}, 125));
+
+				svg.call(chart);
+			});
+		})
+
+});
+</script>
+
+</html>

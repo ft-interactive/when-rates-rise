@@ -1,4 +1,4 @@
-.chart-title{
+.chart-title, .sidebar-title{
 	font-family: "MetricWeb", sans-serif;
 	font-size: 18px;
 	font-weight: 600;
@@ -7,7 +7,7 @@
 	margin-bottom:0px;
 }
 
-p.chart-subtitle{
+p.chart-subtitle, .sidebar-subtitle{
 	font-family: "MetricWeb", sans-serif;
 	font-size: 18px;
 	font-weight: 200;
@@ -33,6 +33,13 @@ p.chart-subtitle{
 	height: 900px;
 	font-family: "MetricWeb", sans-serif;
 }
+
+.market-probability-sidebar {
+	height: 400px;
+	width: 355px;
+	font-family: "MetricWeb", sans-serif;
+}
+
 .domain {
 	fill: none;
 }
