@@ -8,13 +8,14 @@
 <script src="components/d3/d3.v3.min.js"></script>
 </head>
 <body>
+<div class="fast-ft">
 <h1 class="sidebar-title">How fast will US rates rise?</h1>
-<p class="sidebar-subtitle">Probilities calculated from Fed funds futures prices</p>
+<p class="sidebar-subtitle">Probabilities calculated from Fed funds futures prices</p>
 <div class="market-probability-sidebar" 
 data-interest-rate-probability-source="https://ig.ft.com/data/fed-fund-futures/probability-tree.json">
 </div>
 <div class="source">Source: CME Group, updated hourly</div>
-
+</div>
 <script>
 var resizeHandlers = [];
 
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					width:bounds.width
 				});
 			if(window.location.hash){
-				console.log('hello!', window.location.hash)
+				console.log('hello!', window.location.hash);
 				var source = "http://ig.ft.com/data/fed-fund-futures/probability-tree-" + window.location.hash.replace('#','') + ".json";
 			}else{
 				source = this.dataset.interestRateProbabilitySource;

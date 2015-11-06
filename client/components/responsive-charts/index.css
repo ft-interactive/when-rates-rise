@@ -17,6 +17,14 @@ p.chart-subtitle, .sidebar-subtitle{
 	margin-bottom:0px;
 }
 
+p.sidebar-subtitle{
+	font-size: 14px;
+}
+
+.fast-ft{
+  background: #f6e9d8;
+}
+
 .source{
 	font-family: "MetricWeb", sans-serif;
 	font-size: 12px;
