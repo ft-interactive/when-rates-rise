@@ -21,6 +21,10 @@ p.sidebar-subtitle{
 	font-size: 14px;
 }
 
+p.sidebar-link{
+	font-size: 12px;
+}
+
 .fast-ft{
   background: #f6e9d8;
 }
