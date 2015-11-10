@@ -52,6 +52,14 @@ p.sidebar-link{
 	font-family: "MetricWeb", sans-serif;
 }
 
+.market-probability-sidebar .axis-label{
+	font-size: 12px;
+}
+
+.market-probability-sidebar .axis-line{
+	stroke:#a7a59b;
+}
+
 .domain {
 	fill: none;
 }
