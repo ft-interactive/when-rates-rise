@@ -19,10 +19,12 @@ p.chart-subtitle, .sidebar-subtitle{
 
 p.sidebar-subtitle{
 	font-size: 14px;
+	margin-left: 5px;
 }
 
 p.sidebar-link{
 	font-size: 10px;
+	margin-left: 5px;
 }
 
 .fast-ft{
@@ -34,6 +36,15 @@ p.sidebar-link{
 	font-size: 12px;
 	font-variant: italic;
 	color: #333333;
+	
+}
+
+.fast-ft .source{
+	margin-left: 5px;
+}
+
+.fast-ft .axis-label {
+	font-size: 12px;
 }
 
 .responsive-date-line, .dot-plot {
