@@ -106,14 +106,21 @@ function dotPlot(){
 			.data([1])
 			.enter()
 				.append('g')
-				.attr('class','y axis')
+				.attr('class','y axis');
+
+		g.selectAll('.x.axis')
+			.data([1])
+			.enter()
+				.append('g')
+				.attr('class','x axis');
 
 		g.select('.y.axis')
 			.attr('transform','translate('+margins.left+', ' + margins.top + ')')
 			.call(yAxis);
 
-		g.call(xAxis)
+		g.select('x.axis')
 			.attr('transform','translate('+margins.left+',' + plotHeight + ')')
+			.call(xAxis)
 			.selectAll('text')
 				.attr('dy','');
 //MEDIANS
@@ -176,7 +183,7 @@ function dotPlot(){
 			.attr({
 				'transform':function(d){ return 'translate('+xScale(d.year)+',0)'; }
 			}).each(voteDistribution);
-
+		
 		function voteDistribution(data){
 			var parent = d3.select(this);
 
@@ -237,9 +244,6 @@ function dotPlot(){
 		return chart;
 	}
 
-	chart.margins = function chartMargins(o){
-		return chart;
-	}
 
 	return chart;
 }
