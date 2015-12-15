@@ -1,15 +1,14 @@
+(function(){
+	function debounce (fn, timeout) {
+	  var timeoutID = -1;
+	  return function() {
+	    if (timeoutID > -1) {
+	      window.clearTimeout(timeoutID);
+	    }
+	    timeoutID = window.setTimeout(fn, timeout);
+	  }
+	};
 
-function debounce (fn, timeout) {
-  var timeoutID = -1;
-  return function() {
-    if (timeoutID > -1) {
-      window.clearTimeout(timeoutID);
-    }
-    timeoutID = window.setTimeout(fn, timeout);
-  }
-};
-
-document.addEventListener('DOMContentLoaded', function () {
 	var resizeHandlers = [];
 
 	d3.select(window).on('resize', function(){
@@ -61,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					width:bounds.width
 				});
 
+			svg.attr('transform',null);
 			d3.json(this.dataset.source, function(data){
 				var chart = dotPlot()
 					.data(data);
@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				});
 			var dataset = this.dataset;
 			d3.json(dataset.interestRateProbabilitySource, function(data){
-				console.log(data)
 				data = data.map(function(d){ 
 					d.date = new Date(d.date); 
 					return d; 
@@ -109,6 +108,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				svg.call(chart);
 			});
-		})
-
-});
+		});
+}())
