@@ -118,8 +118,7 @@ function dotPlot(){
 			.attr('transform','translate('+margins.left+', ' + margins.top + ')')
 			.call(yAxis);
 
-		g.select('x.axis')
-			.attr('transform','translate('+margins.left+',' + plotHeight + ')')
+		g.select('.x.axis')
 			.call(xAxis)
 			.selectAll('text')
 				.attr('dy','');
