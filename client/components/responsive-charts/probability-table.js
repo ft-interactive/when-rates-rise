@@ -107,7 +107,7 @@ function marketProbability(){
 		g.selectAll('.probability-distribution')
 			.each(function(d){
 				var parent = d3.select(this);
-				d.distribution.unshift(0); //quick fix
+
 
 				var dataEnter = parent.selectAll('.probability')
 					.data(d.distribution)
@@ -184,6 +184,10 @@ function marketProbability(){
 	}
 
 	chart.probabilityTree = function(tree){
+		tree.map(function(d){
+			d.distribution.unshift(0); //quick fix
+			return d;
+		});
 		data = tree;
 		return chart;
 	}
