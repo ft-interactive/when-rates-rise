@@ -8,6 +8,12 @@ function marketProbability(){
 		rateIncrement = 0.25,
 		meetingDate = d3.time.format('%b %d %Y');
 
+	function clamp(value, domain){
+		var v = Math.min(value, domain[1]);
+		v = Math.max(v, domain[0]);
+		return v;
+	}
+
 	function chart(g){
 		var bounds = g.node().getBoundingClientRect(),
 			plotWidth = bounds.width - (margins.left + margins.right),
@@ -119,7 +125,7 @@ function marketProbability(){
 				dataEnter.append('text')
 					.attr('class','probability-label')
 						.text(function(d){
-							var rounded = Math.round(d * 100);
+							var rounded = clamp(Math.round(d * 100), [0,100]);
 							if (rounded === 0) return '';
 							return rounded + "%";
 						});
