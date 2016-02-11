@@ -20,7 +20,7 @@ function marketProbability(){
 
 		xScale.domain(valueDomain).range([ 0, probabilityColumnWidth ]);
 		yScale.domain(dateDomain).rangeBands([ 0, plotHeight ]);
-		distributionYScale.domain([1,0]).range([yScale.rangeBand(), 0]);
+		distributionYScale.domain([1,0]).range([yScale.rangeBand(), 0]).clamp(true);
 
 //axis
 		g.selectAll('.axis-increment')
