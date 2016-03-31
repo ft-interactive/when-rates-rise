@@ -16,6 +16,7 @@
   visibility: hidden; 
 }
 
+
 a.card {
   text-decoration: inherit;
   color: inherit;
@@ -77,6 +78,11 @@ a.card:hover .card__header .card__kicker {
   color: #656565;
   font-family: 'FinancierTextWeb', serif;
   line-height: 1.25;
+}
+
+.card__body a {
+  text-decoration: none;
+  color: #2e6e9e;
 }
 
 a.card .card__body :last-child {
