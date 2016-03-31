@@ -11,7 +11,17 @@
  position: relative;
  text-align: center;
  font-weight: 600;
- font-size: 66px;
+ font-size: 55px;
+ color: #43423E;
+}
+
+.cover h2 {
+ margin: 0 auto;
+ position: relative;
+ text-align: center;
+ font-weight: 200;
+ font-size: 50px;
+ font-style: italic;
  color: #43423E;
 }
 
@@ -91,7 +101,7 @@
   }
 
   .cover h1 {
-   font-size: 40px;
+   font-size: 35px;
    top: -14px;
   }
 
